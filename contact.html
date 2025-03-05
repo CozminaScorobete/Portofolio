@@ -1,19 +1,18 @@
-<!-- templates/contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/contact.css">
+    <link rel="stylesheet" href="static\contact.css">
     <title>Contact Me</title>
 </head>
 <body>
     <header>
-        <h1>My Portfolio</h1>
+        <h1>Contact</h1>
         <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
@@ -21,27 +20,10 @@
         <section class="contact">
             <h2>Contact Me</h2>
             <p>Feel free to reach out for collaborations, job opportunities, or just to say hello!</p>
-        
-            {% with messages = get_flashed_messages(with_categories=True) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        <div class="flash-message {{ category }}">{{ message }}</div>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
-        
-            <form action="/contact" method="POST">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-        
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-        
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-        
-                <button type="submit">Send Message</button>
-            </form>
+            
+            <p><strong>Email:</strong> cozminascorobete@gmail.com</p>
+            <p><strong>Phone:</strong> 0771550956</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/CozminaScorobete" target="_blank">github.com/yourgithub</a></p>
         </section>
         
     </main>

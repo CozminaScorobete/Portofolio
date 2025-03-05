@@ -1,10 +1,10 @@
-<!-- templates/about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/about.css">
+    <link rel="stylesheet" href="static/stock.css">
     <title>About Me</title>
 </head>
 <body>
@@ -21,12 +21,16 @@
         <section class="about">
             <h2>About Me</h2>
             <div class="about-content">
-                <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Profile Picture">
+                <img src="static/cv.JPG" alt="Profile Picture">
                 
                 <div class="about-text">
                     <p>
-                        Hi, I'm <strong>[Your Name]</strong>, an IT professional and AI master's student passionate about technology and innovation.
-                        I specialize in developing web applications, AI projects, and data-driven solutions.
+                        Hello, I am Cozmina, a passionate software developer with 2.5 years of experience in the automotive industry. My expertise lies in software development, machine learning research, and AI research.
+I hold a bachelor's degree in Computer Science and am currently pursuing a master's degree in Artificial Intelligence and Distributed Systems at the West University of Timisoara.
+My technical expertise includes:
+Programing:Python, Java, C/C++, SQL,GIT, Object-Oriented Programing(OOP), Agile Development
+Machine Learning & AI: Scikit-learn, TensorFlow, PyTorch, Keras, OpenCV, Deep Learning, Data Reprocessing, Feature Engineering
+Data & Analysis: Pandas, NumPy, Data Visualization (Matplotlib), SQL, Big Data
                     </p>
                     <p>
                         I'm always looking for exciting projects to work on and opportunities to expand my knowledge.
@@ -34,9 +38,7 @@
                     </p>
 
                     <!-- CV Download Button -->
-                    <form action="{{ url_for('static', filename='cv.pdf') }}" method="get">
-                        <button type="submit" class="cv-btn">📄 Download My CV</button>
-                    </form>
+                    <a href="static\resume.pdf" download class="download-btn">Download CV (PDF)</a>
                 </div>
             </div>
         </section>
