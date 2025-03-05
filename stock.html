@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Project</title>
+    <link rel="stylesheet" href="static/stock.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Research Project: Anomaly Detection in Stock Markets</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+    </header>
+
+    <main class="research-container">
+
+        <div class="card">
+            <h2>Abstract</h2>
+            <p>The rapid growth of the theology made it crucial to have systems that are able to predict anomalies behavior in stock markets. Machine Learning (ML) and Deep Learning (DL) techniques have proven to be effective in anomaly detection. We decided to explore how the autoencoders can be used to detect anomalies in high dimension data-sets like the stock market, by training 2 models one that has synthetic data from Lorenz Attractor and another one that has synthetic data from Van der Pol.</p>
+        </div>
+
+        <div class="card">
+            <h2>Introduction</h2>
+            <p>In the current time, financial markets are essential for the economic impact, due to it is a critical task to identify anomalies (chaotic behavior, unexpected shifts, or critical transitions). In order to solve this issue, machine learning (ML) became an essential tool for understanding complex dynamics in this field. Anomalies in this field may lead to economic crises, fraud, or market inefficiencies; however, early detection could allow mitigating potential risks or exploiting emerging opportunities.</p>
+            <p>To solve this critical problem, models like Long Term Short Memory (LSTM) based autoencoders excel in detecting anomalies, as they capture complex spatial and temporal relationships. However, this is not an easy task due to the high dimension of the data and the noise in it. The non-stationary nature of the markets, which are always fluctuating, may also lead to greater difficulty in distinguishing anomalies from regular fluctuations.</p>
+        </div>
+
+        <div class="card">
+            <h2>Methodology</h2>
+            <p>We decided to analyze the difference in performance for a model trained with synthetic data generated with Lorenz Attractor as well as one with Van der Pol. The synthetic data was combined with real stock market data. After training the models and verifying their accuracy, we used the data to predict anomalies in stock markets.</p>
+        </div>
+
+        <div class="card">
+            <h2>Results</h2>
+            <h3>Results for Lorenz Attractor</h3>
+            <p>The Lorenz model had a precision of 90% for normal data and 88% for anomalies, indicating that most detected anomalies were correctly identified. In contrast, the recall for anomalies was lower at 50%, meaning some anomalies were not detected.</p>
+            <p>The ROC-AUC score was 0.85, demonstrating strong discrimination between normal and anomalous data.</p>
+            <p>The reconstruction error plot showed a spike at the beginning of the dataset, but this is inconclusive because it could be due to a specific anomaly or a data issue.</p>
+            <p>The training loss showed instability, diverging in later epochs. This may suggest overfitting or difficulty in learning certain patterns. However, the validation loss remained stable, indicating consistent performance on unseen data.</p>
+            <h3>Results for Van der Pol Oscilator</h3>
+            <p>The Van der Pol model had a precision of 89% for normal data and 79% for anomalies, the recall for anomalies was lower at 45\% this means that some anomalies were not detected. 
+                The ROC-AUC score was 0.84 this is close to Lorenz model but shows a minor drop in discrimination capability. </p>
+            <p>The reconstruction error plot showed no significant spike with a more consistent error distribution, the lack of spikes indicates subtler patterns of anomalies.</p>
+            <p>The training loss showed stability for both training loss validation loss indicating a stable learning and no over fitting.</p>
+        </div>
+
+        <div class="card">
+            <h2>Conclusion</h2>
+            <p>To summarize, we explored anomaly detection in time series systems using unsupervised learning. We focused on autoencoders and demonstrated that using the Lorenz Attractor and Van der Pol datasets are two competent systems for anomaly detection. The Van der Pol model showed stable learning but reduced performance due to its cyclic patterns, whereas the Lorenz Model was highly effective, outperforming the Van der Pol model.</p>
+            <p>The results of this research illustrate how the accuracy of the model is impacted by dataset properties such as periodic and chaotic behavior.</p>
+        </div>
+
+        <div class="card download-section">
+            <h2>Download Paper</h2>
+            <a href="static/DSML_Project.pdf" download class="download-btn">Download Research Paper (PDF)</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

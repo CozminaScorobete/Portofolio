@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Project</title>
+    <link rel="stylesheet" href="static/stock.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Research Project: Raport on Anomaly detection using Autoenders and
+            Methods to Improve them</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+    </header>
+
+    <main class="research-container">
+
+        <div class="card">
+            <h2>Abstract</h2>
+            <p>The rapid growth of technology made it crucial to have systems protected against cyber-attacks. Machine Learning (ML) and Deep Learning (DL) techniques have proven to be effective in network anomaly detection. Explainable Artificial Intelligence (XAI) offers an approach in which we can understand those "black boxes", furthermore addressing the main limitation of ML and DL, the lack of trust in the systems. This SoTA focuses on a specified paper <sup>[1]</sup> that explores the use of Shapley Additive Explanation (SHAP), an XAI technique, to improve the transparency and effectiveness of autoencoder-based models for network anomaly detection.</p>
+        </div>
+
+        <div class="card">
+            <h2>Introduction</h2>
+            <p>Due to the increasing dependence on digital systems and internet connectivity, there has been a growth in malicious attacks. As a result, anomaly detection become a critical field in cybersecurity. The aim of anomaly detection is to identify unusual traffic patterns that indicate potential threats, such as Distributes Denial-of-Service(DDos), infiltration and data exfiltration. However, while machine learning (ML) and deep learning (DL) methods have shown significant promise in detecting anomalies, they are often criticized for their lack of interpretability. These models, capable of learning from unlabeled data, offer unique opportunities for identifying subtle and emerging patterns in network traffic that traditional systems might overlook.</p>
+            
+        </div>
+
+        <div class="card">
+            <h2>Methodology</h2>
+            <p>In order to have a solid foundation for the report, a wide range of sources were consulted. And each papers needed to meet a number of criteria in order to be included in the report.
+
+                Some sources are: Science Direct, Google Scholar,DBLP, arXiv, Research Gate.</p>
+            <p>Some inclusion Criteria are: papers published by reputable journals, research that present practical applications not only theoretical, publishing year to be at least in the 10-15 years, the number of citations must be higher then 50.</p>
+            <p>Some exclusion criteria are: papers lacking methodology or papers that have questionable results, studies that are not relevant to the topic of the report and outdated works.</p>
+        </div>
+
+        <div class="card">
+            <h2>Performance Analysis on My Model vs the One in <sup>[1]</sup></h2>
+            <p>In Table 1, we can see that the SHAP model I implemented had **worse accuracy** compared to the one in the paper. However, this is not conclusive due to the fact that I was unable to use the full dataset due to hardware limitations.</p>
+            <p>SHAP requires greater computational power than what I had available, which further highlights that while SHAP may be an effective way to improve models, it comes at a **significant computational cost**.</p>
+            <p>Additionally, in Table 1, Precision, Recall, and F1 scores for the first approach were all **0**, indicating a strong bias towards normal data. For the SHAP model, the Precision was **0.1529**, Recall was **0.6842**, and F1 score was **0.2500**, which is still not ideal but an improvement over the previous approach.</p>
+        </div>
+
+        <div class="card">
+            <h2>Results from Partial Dataset Training</h2>
+            <table>
+                <caption>Table 1: The result from training on a part of the dataset</caption>
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Paper</th>
+                        <th>My Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>SHAP_Model (2021)</strong></td>
+                        <td>Accuracy = 94%, AUC = 0.969</td>
+                        <td>AUC = 0.7194</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SHAP_Model (Baseline): Model_1</strong></td>
+                        <td>Accuracy = 81.9%, AUC = 0.819</td>
+                        <td>Accuracy = 93.17%, AUC = 0.9740</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Model_2</strong></td>
+                        <td>Accuracy = 84.3%, AUC = 0.843</td>
+                        <td>Not evaluated</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Results from Full Dataset Training</h2>
+            <p>The following table (Table 2) presents the model's performance on the **full dataset**. The performance is significantly lower, likely due to the hardware constraints. The full training dataset was **2GB**, which made computations more difficult.</p>
+            <p>For both models, the metrics **Precision, Recall, and F1 score** were also **0**. However, this is still not conclusive. I believe the model would have performed better with improved hardware.</p>
+        </div>
+
+        <div class="card">
+            <table>
+                <caption>Table 2: The result from training on the full dataset</caption>
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Paper</th>
+                        <th>My Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>SHAP_Model (2021)</strong></td>
+                        <td>Accuracy = 94%, AUC = 0.969</td>
+                        <td>Could not compute</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SHAP_Model (Baseline): Model_1</strong></td>
+                        <td>Accuracy = 81.9%, AUC = 0.819</td>
+                        <td>Accuracy = 42%, AUC = 0.65568</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Model_2</strong></td>
+                        <td>Accuracy = 84.3%, AUC = 0.843</td>
+                        <td>Accuracy = 42%, AUC = 0.5867</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Conclusion</h2>
+            <p> The comparative analysis shewed that SHAP could improve a model but that still remain to be decided in further research. I have analyzed different kind of models like LSTM-based autoencoders, RDA and Robust Deep Autoencoders, the paper present an analysis with their streamlets and challenges.</p>
+            <p>There were also some limitations provided for the SHAP model one of the biggest challenges being the computation effort required to use such a model.</p>
+        </div>
+
+        <div class="card download-section">
+            <h2>Download Paper</h2>
+            <a href="static/Raport.pdf" download class="download-btn">Download Research Paper (PDF)</a>
+        </div>
+        <div class="card">
+            <h2>References</h2>
+            <pre>
+                Khushnaseeb Roshan and Aasim Zafar. Utilizing xai technique
+                to improve autoencoder based model for computer network
+                anomaly detection with shapley additive explanation (shap).
+                arXiv preprint arXiv:2112.08442, 2021.
+            
+            </pre>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
